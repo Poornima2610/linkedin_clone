@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/constants/color_constants.dart';
 import 'package:flutter_application_1/view/home_screen/home_screen.dart';
+import 'package:flutter_application_1/view/my_network/my_network_screen.dart';
 
 
 
@@ -15,9 +16,7 @@ class BottomNavBarScreen extends StatefulWidget {
 class _BottomNavBarScreenState extends State<BottomNavBarScreen> {
   List<Widget> screesList = [
     HomeScreen(),
-    Container(
-      color: Colors.yellow,
-    ),
+    MyNetworkScreen(),
     Container(
       color: Colors.white,
     ),
@@ -52,7 +51,9 @@ class _BottomNavBarScreenState extends State<BottomNavBarScreen> {
         selectedItemColor: ColorConstants.primaryblack,
         currentIndex: selectedIndex,
         items: [
-          const BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
+          const BottomNavigationBarItem(icon: Icon(Icons.home
+          
+          ), label: "Home"),
           const BottomNavigationBarItem(icon: Icon(Icons.group), label: "My Network"),
 
           // center bottm nav  button

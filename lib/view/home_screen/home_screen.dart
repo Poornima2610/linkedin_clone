@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/constants/color_constants.dart';
 import 'package:flutter_application_1/dummy_db.dart';
+import 'package:flutter_application_1/view/edit_profile/edit_profile.dart';
 import 'package:flutter_application_1/view/home_screen/custome_home_card/custome_home_card.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -18,34 +19,44 @@ class _HomeScreenState extends State<HomeScreen> {
         centerTitle: true,
         leading: Padding(
           padding: const EdgeInsets.only(left: 10),
-          child: CircleAvatar(
-            radius: 50,
-            backgroundImage: NetworkImage(
-                "https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"),
-          ),
-        ),
-        title: Container(
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(5),
-            color: ColorConstants.primarygray,
-          ),
-          child: Padding(
-            padding: const EdgeInsets.all(5),
-            child: Row(
-              children: [
-                Icon(Icons.search),
-                SizedBox(
-                  width: 10,
-                ),
-                Text(
-                  "Search",
-                  style: TextStyle(color: ColorConstants.primaryblack),
-                ),
-                Spacer(),
-                Icon(Icons.qr_code)
-              ],
+          child: InkWell(
+            onTap: () {
+              Navigator.push(context, MaterialPageRoute(builder: (context) => EditProfile(),));
+            },
+            child: CircleAvatar(
+              radius: 50,
+              backgroundImage: NetworkImage(
+                  "https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"),
             ),
           ),
+        ),
+        title: Row(
+          children: [
+            Expanded(
+              child: TextField(
+                decoration: InputDecoration(
+                    suffixIcon: Icon(Icons.select_all_sharp),
+                    hintText: "Search",
+                    prefixIconConstraints: BoxConstraints(
+                      minWidth: 30,
+                    ),
+                    prefixIcon: Icon(
+                      Icons.search,
+                      size: 20,
+                    ),
+                    isDense: true,
+                    fillColor: ColorConstants.primaryblack.withOpacity(.1),
+                    filled: true,
+                    contentPadding:
+                        EdgeInsets.symmetric(horizontal: 15, vertical: 5),
+                    border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(5),
+                        borderSide: BorderSide.none),
+                        ),
+                        
+              ),
+            ),
+          ],
         ),
         actions: [
           Padding(
