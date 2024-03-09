@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/constants/color_constants.dart';
 import 'package:flutter_application_1/view/home_screen/home_screen.dart';
+import 'package:flutter_application_1/view/jobs_screen/jobs_Screen.dart';
 import 'package:flutter_application_1/view/my_network/my_network_screen.dart';
+import 'package:flutter_application_1/view/notification_screen/notification_screen.dart';
 
 
 
@@ -20,12 +22,9 @@ class _BottomNavBarScreenState extends State<BottomNavBarScreen> {
     Container(
       color: Colors.white,
     ),
-    Container(
-      color: Colors.blue,
-    ),
-    Container(
-      color: Colors.green,
-    ),
+    NotificationScreen(),
+    
+    JobScreen()
   ];
 
   int selectedIndex = 0;

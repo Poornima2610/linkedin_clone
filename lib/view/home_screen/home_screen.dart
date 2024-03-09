@@ -3,6 +3,7 @@ import 'package:flutter_application_1/constants/color_constants.dart';
 import 'package:flutter_application_1/dummy_db.dart';
 import 'package:flutter_application_1/view/edit_profile/edit_profile.dart';
 import 'package:flutter_application_1/view/home_screen/custome_home_card/custome_home_card.dart';
+import 'package:flutter_application_1/view/messaging_screen/messaging_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -61,7 +62,9 @@ class _HomeScreenState extends State<HomeScreen> {
         actions: [
           Padding(
             padding: const EdgeInsets.only(right: 10),
-            child: IconButton(onPressed: () {}, icon: Icon(Icons.sms)),
+            child: IconButton(onPressed: () {
+              Navigator.push(context, MaterialPageRoute(builder: (context) => MessageScreen(),));
+            }, icon: Icon(Icons.sms)),
           )
         ],
       ),

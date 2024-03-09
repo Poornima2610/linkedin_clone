@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/constants/color_constants.dart';
 import 'package:flutter_application_1/view/edit_profile/edit_profile.dart';
+import 'package:flutter_application_1/view/messaging_screen/messaging_screen.dart';
 import 'package:flutter_application_1/view/my_network/widgets/suggesion_network.dart';
 
 class MyNetworkScreen extends StatelessWidget {
@@ -54,7 +55,9 @@ class MyNetworkScreen extends StatelessWidget {
         actions: [
           Padding(
             padding: const EdgeInsets.only(right: 10),
-            child: IconButton(onPressed: () {}, icon: Icon(Icons.sms)),
+            child: IconButton(onPressed: () {
+              Navigator.push(context, MaterialPageRoute(builder: (context) => MessageScreen(),));
+            }, icon: Icon(Icons.sms)),
           )
         ],
       ),
