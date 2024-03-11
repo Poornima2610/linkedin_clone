@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/constants/color_constants.dart';
+import 'package:flutter_application_1/mynetworkdummydb.dart';
 import 'package:flutter_application_1/view/edit_profile/edit_profile.dart';
 import 'package:flutter_application_1/view/messaging_screen/messaging_screen.dart';
 import 'package:flutter_application_1/view/my_network/widgets/suggesion_network.dart';
@@ -114,8 +115,15 @@ class MyNetworkScreen extends StatelessWidget {
             ListView.builder(
               shrinkWrap: true,
               physics: NeverScrollableScrollPhysics(),
-              itemCount: 15,
-              itemBuilder: (context, index) => SuggesionNetwork(),
+              itemCount: MyNetworkDb.MyNetworkList.length,
+              itemBuilder: (context, index) => SuggesionNetwork(
+                profile: MyNetworkDb.MyNetworkList[index]["profile"],
+                username: MyNetworkDb.MyNetworkList[index]["username"],
+                designation: MyNetworkDb.MyNetworkList[index]["designation"],
+                 profile2: MyNetworkDb.MyNetworkList[index]["profile2"],
+                username2: MyNetworkDb.MyNetworkList[index]["username2"],
+                designation2: MyNetworkDb.MyNetworkList[index]["designation2"],
+              ),
             ),
           ],
         ),

@@ -35,7 +35,7 @@ class _CustomChatCardState extends State<CustomChatCard> {
           Stack(
             children: [
               CircleAvatar(
-                radius: 30,
+                radius: 25,
                 backgroundImage: NetworkImage(widget.profile_pic),
               ),
               Positioned(

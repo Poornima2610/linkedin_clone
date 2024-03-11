@@ -3,7 +3,23 @@ import 'package:flutter_application_1/constants/color_constants.dart';
 
 
 class SuggesionNetwork extends StatelessWidget {
-  const SuggesionNetwork({Key? key}) : super(key: key);
+  const SuggesionNetwork({ super.key,
+    required this.profile,
+    required this.username,
+    required this.designation,
+    required this.profile2,
+    required this.username2,
+    required this.designation2,
+  
+  
+  });
+
+  final String profile;
+  final String username;
+  final String designation;
+  final String profile2;
+  final String username2;
+  final String designation2;
 
   @override
   Widget build(BuildContext context) {
@@ -32,10 +48,10 @@ class SuggesionNetwork extends StatelessWidget {
                         ),
                         SizedBox(height: 40),
                         Text(
-                          "User name",
+                          username,
                           style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
                         ),
-                        Center(child: Text("junior Software Developer")),
+                        Center(child: Text(designation)),
                         Padding(
                           padding: const EdgeInsets.all(8.0),
                           child: Row(
@@ -71,7 +87,7 @@ class SuggesionNetwork extends StatelessWidget {
                     right: 0,
                     child: CircleAvatar(
                       radius: 30,
-                      backgroundImage: NetworkImage('https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'),
+                      backgroundImage: NetworkImage(profile),
                     ),
                   ),
                   Positioned(
@@ -106,10 +122,10 @@ class SuggesionNetwork extends StatelessWidget {
                         ),
                         SizedBox(height: 40),
                         Text(
-                          "User name",
+                          username2,
                           style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
                         ),
-                        Center(child: Text("junior Software Developer")),
+                        Center(child: Text(designation)),
                         Padding(
                           padding: const EdgeInsets.all(8.0),
                           child: Row(
@@ -145,7 +161,7 @@ class SuggesionNetwork extends StatelessWidget {
                     right: 0,
                     child: CircleAvatar(
                       radius: 30,
-                      backgroundImage: NetworkImage('https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'),
+                      backgroundImage: NetworkImage(profile2),
                     ),
                   ),
                   Positioned(

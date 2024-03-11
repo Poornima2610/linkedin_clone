@@ -15,7 +15,7 @@ class _MessageScreenState extends State<MessageScreen> {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          "Messagin",
+          "Messaging",
           style: TextStyle(
               color: ColorConstants.primaryblack, fontWeight: FontWeight.bold),
         ),
@@ -57,6 +57,20 @@ class _MessageScreenState extends State<MessageScreen> {
           ],
         ),
       ),
+
+      floatingActionButton: FloatingActionButton(
+  onPressed: () {
+    // Add your action here
+  },
+  child: Icon(Icons.edit_square,color: Colors.white,),
+  backgroundColor: Color.fromARGB(255, 5, 79, 140),
+  shape: RoundedRectangleBorder(
+    borderRadius: BorderRadius.circular(50),
+  ),
+),
+      
+    
     );
+
   }
 }
