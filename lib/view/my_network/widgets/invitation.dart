@@ -72,6 +72,14 @@ class Invitation extends StatelessWidget {
                           ],
                         ),
                         Divider(),
+                        SizedBox(height: 150),
+                        Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
+                          Center(child: Container(child: Image(image: AssetImage("assets/images/Screenshot 2024-03-15 131007.png")),)),
+                          Text("No invitation here",style: TextStyle(fontSize: 25,fontWeight: FontWeight.bold),)
+                        ],)
                       ],
                     ),
                   ),
@@ -128,6 +136,11 @@ class Invitation extends StatelessWidget {
                           ],
                         ),
                         Divider(),
+                        SizedBox(height: 150,),
+                        Column(children: [Container(child: Image(image: AssetImage("assets/images/Screenshot 2024-03-15 131020.png")),),
+                        Text("No invitations here",style: TextStyle(fontSize: 25,fontWeight: FontWeight.bold))
+                        
+                        ],)
                       ],
                     ),
                   ),
