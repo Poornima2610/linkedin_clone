@@ -3,6 +3,8 @@ import 'package:flutter_application_1/constants/color_constants.dart';
 import 'package:flutter_application_1/mynetworkdummydb.dart';
 import 'package:flutter_application_1/view/edit_profile/edit_profile.dart';
 import 'package:flutter_application_1/view/messaging_screen/messaging_screen.dart';
+import 'package:flutter_application_1/view/my_network/widgets/invitation.dart';
+import 'package:flutter_application_1/view/my_network/widgets/manage_my_network.dart';
 import 'package:flutter_application_1/view/my_network/widgets/suggesion_network.dart';
 
 class MyNetworkScreen extends StatelessWidget {
@@ -70,12 +72,19 @@ class MyNetworkScreen extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Text(
-                    "Manage My Network",
-                    style: TextStyle(
-                        color: Colors.blue,
-                        fontWeight: FontWeight.bold,
-                        fontSize: 18),
+                  InkWell(
+                    onTap: () {
+                      Navigator.push(context, MaterialPageRoute(builder: (context) => ManageMyNetwork(),));
+                    },
+                    child: Container(
+                      child: Text(
+                        "Manage My Network",
+                        style: TextStyle(
+                            color: Colors.blue,
+                            fontWeight: FontWeight.bold,
+                            fontSize: 18),
+                      ),
+                    ),
                   ),
                   Icon(Icons.arrow_forward_ios_outlined)
                 ],
@@ -89,12 +98,19 @@ class MyNetworkScreen extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Text(
-                    "Invitation",
-                    style: TextStyle(
-                        color: Colors.blue,
-                        fontWeight: FontWeight.bold,
-                        fontSize: 18),
+                  InkWell(
+                    onTap: () {
+                     Navigator.push(context, MaterialPageRoute(builder: (context) => Invitation(),)) ;
+                    },
+                    child: Container(
+                      child: Text(
+                        "Invitation (0)",
+                        style: TextStyle(
+                            color: Colors.blue,
+                            fontWeight: FontWeight.bold,
+                            fontSize: 18),
+                      ),
+                    ),
                   ),
                   Icon(Icons.arrow_forward_ios_outlined)
                 ],

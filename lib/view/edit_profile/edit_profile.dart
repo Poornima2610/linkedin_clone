@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/constants/color_constants.dart';
+import 'package:flutter_application_1/view/settings_screen/settings_screen.dart';
 
 class EditProfile extends StatelessWidget {
   const EditProfile({super.key});
@@ -29,7 +30,10 @@ class EditProfile extends StatelessWidget {
               ),
             ],
           ),
-          actions: [Icon(Icons.settings)],
+          actions: [IconButton(onPressed: () {
+            Navigator.push(context, MaterialPageRoute(builder: (context) => SettingScreen(),));
+            
+          }, icon: Icon(Icons.settings))],
         ),
         body: SingleChildScrollView(
           child: Stack(
@@ -230,8 +234,9 @@ class EditProfile extends StatelessWidget {
                                   borderRadius: BorderRadius.circular(10)),
                               child: Padding(
                                 padding: const EdgeInsets.all(20),
-                                child: Expanded(
+                                child: SingleChildScrollView(
                                   child: Row(
+                                    
                                     mainAxisAlignment:
                                         MainAxisAlignment.spaceBetween,
                                     children: [
@@ -251,7 +256,7 @@ class EditProfile extends StatelessWidget {
                                       ),
                                       VerticalDivider(
                                           color: ColorConstants.primaryblack,
-                                          thickness: 2),
+                                          ),
                                       Column(
                                         mainAxisAlignment: MainAxisAlignment.start,
                                         crossAxisAlignment:
@@ -267,7 +272,7 @@ class EditProfile extends StatelessWidget {
                                       ),
                                       VerticalDivider(
                                           color: ColorConstants.primaryblack,
-                                          thickness: 2),
+                                          ),
                                       Column(
                                         mainAxisAlignment: MainAxisAlignment.start,
                                         crossAxisAlignment:

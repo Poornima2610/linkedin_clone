@@ -4,6 +4,7 @@ import 'package:flutter_application_1/view/home_screen/home_screen.dart';
 import 'package:flutter_application_1/view/jobs_screen/jobs_Screen.dart';
 import 'package:flutter_application_1/view/my_network/my_network_screen.dart';
 import 'package:flutter_application_1/view/notification_screen/notification_screen.dart';
+import 'package:flutter_application_1/view/post_screen/post_screen.dart';
 
 
 
@@ -19,9 +20,7 @@ class _BottomNavBarScreenState extends State<BottomNavBarScreen> {
   List<Widget> screesList = [
     HomeScreen(),
     MyNetworkScreen(),
-    Container(
-      color: Colors.white,
-    ),
+    PostScreen(),
     NotificationScreen(),
     
     JobScreen()
@@ -39,11 +38,11 @@ class _BottomNavBarScreenState extends State<BottomNavBarScreen> {
             selectedIndex = value;
             setState(() {});
           } else {
-            // Navigator.push(
-            //     context,
-            //     MaterialPageRoute(
-            //       builder: (context) => SplashScreen(),
-            //     ));
+            Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => PostScreen(),
+                ));
           }
         },
         type: BottomNavigationBarType.fixed,
